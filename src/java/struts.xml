@@ -1,0 +1,19 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+      <!-- struts2 默认配置文件，必须加进来 有这里看出，当前文件的路径是跟路径下classes路径，所以其他的文件要从classes这个路径开始找 -->  
+    <include file="struts-plugin.xml" />  
+    <include file="struts-default.xml" />     
+    <include file="example.xml"/>
+    <include file="realtime.xml"/>
+    <include file="floodmanage.xml"/>
+    <include file="systemmanage.xml"/>
+    
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        
+    </package>
+    
+</struts>

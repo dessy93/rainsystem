@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+   
+    
+    <package name="realtime" namespace="/" extends="struts-default">
+        
+           <action name="R_F_manage" class="com.R_F_Action" method="manage">
+              <result name="success">/systemindex.jsp</result>
+          </action>
+          
+   <action name="manage_S_M" class="com.S_M_Action" method="manage">
+   <result name="success">/systemmanage/success.jsp</result>
+    </action>
+    
+   
+          
+          
+    </package>
+</struts>
+

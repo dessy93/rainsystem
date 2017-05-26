@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+   
+    
+    <package name="realtime" namespace="/" extends="struts-default">
+                 
+           <action name="manage" class="com.test" method="manage">
+              <result name="success">/shishi/2.jsp</result>
+          </action>
+          
+              <action name="C1_manage" class="com.C1_Action" method="manage">
+              <result name="success">/shishi/chart.jsp</result>
+          </action>
+          
+           <action name="R_F_manage1" class="com.R_F_Action" method="manage">
+              <result name="success">/shishi/rainmonitor.jsp</result>
+          </action>
+          
+            <action name="R_F_manage2" class="com.R_F_Action" method="manage">
+              <result name="success">/shishi/1.jsp</result>
+          </action>
+          
+          
+   <action name="manage_R_P" class="com.R_P_Action" method="manage">
+   <result name="success">/shishi/report.jsp</result>
+    </action>
+    
+    <action name="show_R_P" class="com.R_P_Action" method="showlist">
+   <result name="success">/shishi/report.jsp</result>
+    </action>
+    
+      <action name="manage_W_T" class="com.R_P_Action" method="showlist">
+   <result name="success">/shishi/weather.jsp</result>
+    </action>
+          
+    </package>
+</struts>
+

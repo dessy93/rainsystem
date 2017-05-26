@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+   
+    
+    <package name="com" namespace="/" extends="struts-default">
+        <action name="HelloWorld" class="example.HelloWorld">
+            <result>/example/HelloWorld.jsp</result>
+        </action>
+        
+          <action name="manage" class="com.test" method="manage">
+              <result name="success">/shishi/2.jsp</result>
+          </action>
+          
+           <action name="R_F_manage" class="com.R_F_Action" method="manage">
+              <result name="success">/systemindex.jsp</result>
+          </action>
+          
+           <action name="R_F_manage1" class="com.R_F_Action" method="manage">
+              <result name="success">/shishi/rainmonitor.jsp</result>
+          </action>
+          
+            <action name="R_F_manage2" class="com.R_F_Action" method="manage">
+              <result name="success">/shishi/1.jsp</result>
+          </action>
+          
+            <action name="show_B_O_Q" class="com.R_F_Q_Action" method="showlist">
+              <result name="success">/find/findrainfull.jsp</result>
+          </action>
+          
+            <action name="show_W_L_Q" class="com.W_L_Q_Action" method="showlist">
+              <result name="success">/find/findwaterlevel.jsp</result>
+          </action>
+          
+           <action name="F_W_manage" class="com.R_F_Action" method="manage">
+              <result name="success">/floodmanage/floodwarning.jsp</result>
+          </action>
+          
+            <action name="C1_manage" class="com.C1_Action" method="manage">
+              <result name="success">/shishi/chart.jsp</result>
+          </action>
+          
+           <action name="S_D_manage" class="com.S_D_Action" method="manage">
+              <result name="success">/floodmanage/stafflist.jsp</result>
+          </action>
+          
+          <action name="S1_D_manage" class="com.S_D_Action" method="manage">
+              <result name="success">/floodmanage/stafflist1.jsp</result>
+          </action>
+          
+          <action name="S2_D_manage" class="com.S_D_Action" method="manage">
+              <result name="success">/floodmanage/stafflist2.jsp</result>
+          </action>
+          
+          <action name="S3_D_manage" class="com.S_D_Action" method="manage">
+              <result name="success">/floodmanage/stafflist3.jsp</result>
+          </action>
+          
+          
+                <action name="M_D_manage" class="com.M_D_Action" method="manage">
+              <result name="success">/floodmanage/materiallist.jsp</result>
+          </action>
+          
+           <action name="M1_D_manage" class="com.M_D_Action" method="manage">
+              <result name="success">/floodmanage/materiallist1.jsp</result>
+          </action>
+          
+          
+              <action name="manage_R_P" class="com.R_P_Action" method="manage">
+   <result name="success">/shishi/report.jsp</result>
+    </action>
+    
+    <action name="show_R_P" class="com.R_P_Action" method="showlist">
+   <result name="success">/shishi/report.jsp</result>
+    </action>
+    
+   <action name="manage_W_T" class="com.R_P_Action" method="showlist">
+   <result name="success">/shishi/weather.jsp</result>
+    </action>
+    
+    
+     <action name="manage_F_P" class="com.F_P_Action" method="manage">
+   <result name="success">/floodmanage/success.jsp</result>
+    </action>
+    
+     <action name="manage_S_M" class="com.S_M_Action" method="manage">
+   <result name="success">/systemmanage/success.jsp</result>
+    </action>
+          
+          
+    </package>
+</struts>
+

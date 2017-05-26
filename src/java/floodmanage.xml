@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+   
+    
+    <package name="floodmanage" namespace="/" extends="struts-default">
+        
+             <action name="F_W_manage" class="com.R_F_Action" method="manage">
+              <result name="success">/floodmanage/floodwarning.jsp</result>
+          </action>
+                 
+          
+           <action name="S_D_manage" class="com.S_D_Action" method="manage">
+              <result name="success">/floodmanage/stafflist.jsp</result>
+          </action>
+          
+          <action name="S1_D_manage" class="com.S_D_Action" method="manage">
+              <result name="success">/floodmanage/stafflist1.jsp</result>
+          </action>
+          
+          <action name="S2_D_manage" class="com.S_D_Action" method="manage">
+              <result name="success">/floodmanage/stafflist2.jsp</result>
+          </action>
+          
+          <action name="S3_D_manage" class="com.S_D_Action" method="manage">
+              <result name="success">/floodmanage/stafflist3.jsp</result>
+          </action>
+          
+          
+                <action name="M_D_manage" class="com.M_D_Action" method="manage">
+              <result name="success">/floodmanage/materiallist.jsp</result>
+          </action>
+          
+           <action name="M1_D_manage" class="com.M_D_Action" method="manage">
+              <result name="success">/floodmanage/materiallist1.jsp</result>
+          </action>
+          
+ 
+     <action name="manage_F_P" class="com.F_P_Action" method="manage">
+   <result name="success">/floodmanage/success.jsp</result>
+    </action>
+   
+          
+          
+    </package>
+</struts>
+

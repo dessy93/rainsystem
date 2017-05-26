@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>基于Gis的洪涝监测系统</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    
+    <!-- Custom styles for this template -->
+    <link href="bootstrap/cover.css" rel="stylesheet">
+
+
+    
+     
+ 
+  <script language="javascript" type="text/javascript">
+function time()
+
+{
+
+  var now= new Date();
+  var year=now.getFullYear();
+  var month=now.getMonth();
+  var date=now.getDate();
+  var hour=now.getHours();       //获取当前小时数(0-23)
+  var minu=now.getMinutes();     //获取当前分钟数(0-59)
+
+//  var mtime=now.toLocaleString( );  
+//写入相应id
+document.getElementById("time").innerHTML="当前时间:" + year + "/" + (month+1) + "/"+date + " " +  hour + ":" +minu;
+//document.getElementById("time").innerHTML="当前时间:" + mtime;
+
+} 
+
+function myFunction()
+{
+    alert("你好，我是一个警告框！");
+}
+
+
+
+</script>
+    
+    
+    <style>
+    html, body, #mapDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+    }
+    
+     .navbar{ width:20%;
+           height:750px;
+           background-color:#000000; 
+           position:absolute; 
+           left:1500px; 
+           top:100px;    
+           filter:alpha(Opacity=80);
+            -moz-opacity:0.5;
+            opacity: 0.5; }        <!--右侧div大小以及透明度设置-->
+     
+   
+         
+  </style>
+  
+  <style>
+         .navbarr{ width:40%;
+           height:500px;
+           background-color:#000000; 
+           position:absolute; 
+           left:500px; 
+           top:300px;
+           display:none;
+           
+          
+           }   <!--右侧div大小以及透明度设置-->
+           
+           .cancle{
+           position:absolute;        
+           top:450px; 
+           font-size:16px;
+ 
+           }
+  </style>    
+  </head>
+  
+  
+  <body class="claro" onload="time()">
+  
+          <div class="masthead clearfix">
+             
+              
+            <div class="inner">
+                
+              <h3 >基于Gis的洪涝监测系统</h3>
+              <a id="time"> </a> </br>
+              <a>更新时间: 2017/3/1 11:00</a>
+              
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li><a id = "c1"  onclick='$("#div2").show();$("#iframe2").show()' >实时监测</a></li>
+                  <li><a href="#">指挥调度</a></li>
+                  <li><a href="#">系统管理</a></li>
+                  
+                  
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+            
+        <div id = "div1"> 
+            
+            <div class="navbarr" id ="div2">
+               
+                <div style = "height:50px;width:33%;float: left"><a href = "shishi/rainmonitor.jsp" target="mainframe1">水量监测</a></div>
+                  <div style = "height:50px;width:33%;float: left"><a href="shishi/weather.jsp" target="mainframe1">气象监测</a></div>
+                    <div style = "height:50px;width:34%;float: left"><a href="shishi/report.jsp" target="mainframe1">市民上报</a></div>
+                   <iframe src="shishi/rainmonitor.jsp" name="mainframe1"  height="400px" width="100%" allowtransparency="true">
+              
+                      
+                  </iframe>
+                <div class="cancle" onclick='$("#div2").hide();$("#iframe2").hide()' >关闭</div>
+            </div>
+              
+             <div class="navbar">
+                 <h4>实时水位监测</h4>
+                 </br>
+                   </br>
+                     </br>
+                 <table class="table table-hover">
+                   <tr>
+                        <th>监测站点</th>
+                        <th>水位</th>
+                    </tr>
+                    
+                    <tr>
+                        <td align="left"><a href="link address">华中科技大学</a></td>
+                        <td align="left">23</td>
+                    </tr>
+                    
+                      <tr>
+                        <td align="left"><a href="link address">华中科技大学</a></td>
+                        <td align="left">23</td>
+                    </tr>
+                    
+                   
+                 </table>
+             </div>
+            
+           
+            
+
+            
+             <iframe src="shishi/1.jsp"   height="950px" width="100%"  id="iframe1" >
+                 
+                      
+            </iframe>
+                 
+        </div>
+    
+          <div >
+              <p> <a href="manage.action">click it</a> </p>
+                <p><a href = "http://hae.hust.edu.cn/ "> 华中科技大学水电学院 </a></p>
+           
+          </div>
+
+   
+    
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+   
+
+   
+    
+
+  </body>
+</html>
